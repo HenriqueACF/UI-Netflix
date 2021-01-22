@@ -25,7 +25,7 @@ export default ({item}) => {
                             {item.vote_average} pontos
                         </div>
                         <div className="featured--year">
-                            Ano de lançamento: {firstDate.getFullYear()}
+                            {firstDate.getFullYear()}
                         </div>
                         <div className="featured--seasons">
                             {item.number_of_seasons} Temporada{item.number_of_seasons !== 1 ? 's' : ''}
@@ -35,11 +35,11 @@ export default ({item}) => {
                         {item.overview}
                     </div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`}>▶ Assistir</a>
-                        <a href={`/watch/${item.id}`}>+ Minha Lista</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchbtn">▶ Assistir</a>
+                        <a href={`/watch/${item.id}`} className="featured--mylistbtn">+ Minha Lista</a>
                     </div>
                     <div className="featured--genres">
-                        <strong>Gêneros:</strong>{genres.join(', ')}
+                        <strong>Gêneros: </strong>{genres.join(', ')}
                     </div>
                 </div>
             </div>
