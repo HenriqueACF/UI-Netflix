@@ -60,6 +60,12 @@ export default () =>{
           <MovieRow  key={key} title={item.title} items={item.items}/>
         ))}
       </section>
+
+      <footer>
+        Feito com <span role="img" aria-label="coração">❤</span> por Henrique Assis <br/>
+        Direitos de imagem para a Netflix<br/>
+        Dados disponibilizados atraves da API publica do TMDB.org 
+      </footer>
     </div>
   );
 }
