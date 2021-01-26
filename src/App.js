@@ -18,7 +18,7 @@ export default () =>{
     const loadAll = async ()=>{
       //pegando a lista Total
       let list = await Tmdb.getHomeList();
-      //setMovieList(list);
+      setMovieList(list);
 
       //pegando o featured
       let originals = list.filter(i=>i.slug === 'originals');
@@ -67,9 +67,13 @@ export default () =>{
         Dados disponibilizados atraves da API publica do TMDB.org 
       </footer>
 
-      <div className="loading">
-        <img src="http://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="Loading"/>
-      </div>
+      {movieList.length <= 0 &&
+      
+        <div className="loading">
+          <img src="http://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="Loading"/>
+        </div>
+
+      }
     </div>
   );
 }
